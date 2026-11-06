@@ -22,3 +22,13 @@ Abra no Expo Go em um aparelho para testar a leitura pela câmera. No navegador,
 - histórico de movimentações.
 
 O backend, OCR e WhatsApp automático ficam para a etapa seguinte do piloto.
+
+## Testes automatizados
+
+O primeiro cenário automatizado usa Cucumber para verificar a normalização do código de rastreio.
+
+```bash
+npm test
+```
+
+A pipeline do GitLab executa a verificação do TypeScript e, em seguida, o teste Cucumber. Se qualquer etapa falhar, a pipeline é interrompida e marcada em vermelho.
