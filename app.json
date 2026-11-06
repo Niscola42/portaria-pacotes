@@ -1,0 +1,29 @@
+{
+  "expo": {
+    "name": "Portaria Pacotes",
+    "slug": "portaria-pacotes",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "scheme": "portariapacotes",
+    "userInterfaceStyle": "light",
+    "plugins": [
+      "expo-router",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Permita que o Portaria Pacotes use a câmera para ler etiquetas e códigos de encomendas.",
+          "barcodeScannerEnabled": true
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "android": {
+      "package": "com.portariapacotes.app"
+    },
+    "ios": {
+      "bundleIdentifier": "com.portariapacotes.app"
+    }
+  }
+}
