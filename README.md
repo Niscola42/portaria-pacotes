@@ -29,6 +29,8 @@ O primeiro cenário automatizado usa Cucumber para verificar a normalização do
 
 ```bash
 npm test
+npm run lint
+npm run test:coverage
 ```
 
-A pipeline do GitLab executa a verificação do TypeScript e, em seguida, o teste Cucumber. Se qualquer etapa falhar, a pipeline é interrompida e marcada em vermelho.
+A pipeline do GitLab executa a verificação do TypeScript, os testes Cucumber, a análise estática com ESLint e a medição de cobertura com c8. Se qualquer etapa falhar, a pipeline é marcada em vermelho.

@@ -9,7 +9,9 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "typecheck": "tsc --noEmit",
+    "lint": "eslint app src tests",
     "test": "cucumber-js --config cucumber.mjs",
+    "test:coverage": "c8 --reporter=text --reporter=html --reporter=cobertura --reports-dir=coverage --include=src/package-rules.ts cucumber-js --config cucumber.mjs",
     "test:ci": "cucumber-js --config cucumber.mjs --format progress --format junit:test-results.xml"
   },
   "dependencies": {
@@ -31,6 +33,10 @@
   "devDependencies": {
     "@cucumber/cucumber": "^13.3.0",
     "@types/react": "~19.1.10",
+    "@typescript-eslint/eslint-plugin": "^8.72.2",
+    "@typescript-eslint/parser": "^8.72.2",
+    "c8": "^12.0.0",
+    "eslint": "^9.39.5",
     "typescript": "~5.9.2"
   }
 }
